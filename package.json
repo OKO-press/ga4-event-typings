@@ -1,0 +1,17 @@
+{
+  "name": "@oko-press/ga4-event-typings",
+  "version": "0.1.0",
+  "description": "GA4 Event Typings",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OKO-press/ga4-event-typings.git"
+  },
+  "author": "OKO.press Team",
+  "license": "MIT",
+  "types": "./index.d.ts",
+  "bugs": {
+    "url": "https://github.com/OKO-press/ga4-event-typings/issues"
+  },
+  "homepage": "https://github.com/OKO-press/ga4-event-typings#readme"
+}
