@@ -1,7 +1,7 @@
 import { Item } from "./item";
 
-export interface DataLayerViewItemList {
-  event: "view_item_list";
+export interface DataLayerSelectItem {
+  event: "select_item";
   ecommerce: {
     /**
      * The ID of the list in which the item was presented to the user.
@@ -17,12 +17,14 @@ export interface DataLayerViewItemList {
      *
      * Ignored if set at the item-level.
      *
-     * @example 	Related products
+     * @example Related Products
      */
     item_list_name?: string;
 
     /**
-     * 	The items for the event.
+     * The items for the event.
+     *
+     * The items array is expected to have a single element, representing the selected item. If multiple elements are provided, only the first element in items will be used.
      */
     items: Item[];
   };
