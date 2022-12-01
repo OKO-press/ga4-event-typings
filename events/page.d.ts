@@ -3,5 +3,5 @@ export enum PageType {
 }
 
 export interface DataLayerPage<T extends PageType> {
-  pageType: T
+  page_type: T
 }
