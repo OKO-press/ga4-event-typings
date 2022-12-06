@@ -7,7 +7,7 @@ export * from "./events/purchase";
 export * from "./events/article";
 export * from "./events/page";
 
-export * from "../src/enums/page";
-export * from "../src/enums/article";
+export * from "../enums/page";
+export * from "../enums/article";
 
 export as namespace GA4Events;

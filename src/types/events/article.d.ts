@@ -1,6 +1,6 @@
 import { DataLayerPage } from "./page";
-import {ArticleAvailability, ArticleLength, ArticleType} from "../../src/enums";
-import {PageType} from "../../src/enums";
+import {ArticleAvailability, ArticleLength, ArticleType} from "../../enums/article";
+import {PageType} from "../../enums/page";
 
 export interface DataLayerArticle extends DataLayerPage<PageType.Article> {
   login_status: boolean;
