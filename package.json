@@ -1,12 +1,8 @@
 {
   "name": "@oko-press/ga4-event-typings",
-  "version": "0.4.6",
+  "version": "0.4.7",
   "description": "GA4 Event Typings",
-  "main": "lib/index.js",
-  "types": "src/types/index.d.ts",
-  "scripts": {
-    "build": "tsc"
-  },
+  "types": "index.d.ts",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/OKO-press/ga4-event-typings.git"
@@ -16,11 +12,5 @@
   "bugs": {
     "url": "https://github.com/OKO-press/ga4-event-typings/issues"
   },
-  "homepage": "https://github.com/OKO-press/ga4-event-typings#readme",
-  "devDependencies": {
-    "typescript": "^4.9.3"
-  },
-  "files": ["lib/**/*",
-    "src/types/**/*"
-  ]
+  "homepage": "https://github.com/OKO-press/ga4-event-typings#readme"
 }

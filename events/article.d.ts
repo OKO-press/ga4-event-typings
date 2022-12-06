@@ -1,8 +1,10 @@
 import { DataLayerPage } from "./page";
-import {ArticleAvailability, ArticleLength, ArticleType} from "../../enums/article";
-import {PageType} from "../../enums/page";
 
-export interface DataLayerArticle extends DataLayerPage<PageType.Article> {
+export type ArticleLength = "bardzo krotki" | "krotki" | "sredni" | "dlugi" | "bardzo dlugi";
+export type ArticleType = "text" | "video" | "podcast" | "galeria" | "na zywo";
+export type ArticleAvailability = "zablokowany" | "otwarty";
+
+export interface DataLayerArticle extends DataLayerPage<"Artykuł"> {
   login_status: boolean;
   article_topic: string;
   article_topics: string[];
