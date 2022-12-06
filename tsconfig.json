@@ -1,16 +1,16 @@
 {
   "compilerOptions": {
+    "target": "es5",
     "module": "commonjs",
     "lib": ["es6"],
+    "strict": true,
     "noImplicitAny": true,
     "noImplicitThis": true,
     "strictNullChecks": true,
     "strictFunctionTypes": true,
-    "baseUrl": "../",
-    "typeRoots": ["../"],
-    "types": [],
-    "noEmit": true,
-    "forceConsistentCasingInFileNames": true
+    "outDir": "./lib",
+    "forceConsistentCasingInFileNames": true,
   },
-  "files": ["index.d.ts"]
+  "include": ["src"],
+  "exclude": ["node_modules"],
 }
