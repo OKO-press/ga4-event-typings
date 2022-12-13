@@ -1,6 +1,6 @@
 {
   "name": "@oko-press/ga4-event-typings",
-  "version": "0.4.7",
+  "version": "0.4.8",
   "description": "GA4 Event Typings",
   "types": "index.d.ts",
   "repository": {
