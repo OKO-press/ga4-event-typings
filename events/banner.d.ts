@@ -8,7 +8,7 @@ export type BannerType =
   | "article-after-lead"
   | "article-inner-text";
 
-interface Item {
+interface BannerItem {
   /**
    * The type of payment method.
    */
@@ -40,6 +40,6 @@ interface Item {
 export interface DataLayerBanner {
   event: "view_promotion";
   ecommerce: {
-    items: Item[];
+    items: BannerItem[];
   }
 }
