@@ -8,5 +8,6 @@ export * from "./events/article";
 export * from "./events/page";
 export * from "./events/banner";
 export * from "./events/popup";
+export * from "./events/link";
 
 export as namespace GA4Events;
