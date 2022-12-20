@@ -27,14 +27,17 @@ interface SupportLinkItem {
 export interface DataLayerCommonLink {
   event: "click";
   /**
-   * Name of component connected with link
-   */
-  friendly_component_name?: string;
-  /**
    * Slug of the site
    */
   slug: string;
+  /**
+   * URL of the page the Data Layer Common Link goes to
+   */
   href: string;
+  /**
+   * Name of component connected with link
+   */
+  friendly_component_name?: string;
 }
 
 export interface DataLayerSupportLink {
