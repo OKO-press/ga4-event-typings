@@ -2,6 +2,7 @@
  * Type of banner
  */
 export type BannerType =
+  | "main-site-big"
   | "main-site-newest"
   | "main-site-section-divider"
   | "article-after-text"
