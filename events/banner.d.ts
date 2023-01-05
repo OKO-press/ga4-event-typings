@@ -9,6 +9,13 @@ export type BannerType =
   | "article-after-lead"
   | "article-inner-text";
 
+/**
+ * Type of creative slot
+ */
+export type CreativeSlot =
+  | BannerType
+  | "mobile-bottom-bar";
+
 interface BannerItem {
   /**
    * The type of payment method.
