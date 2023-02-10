@@ -4,7 +4,7 @@
 export type PopupType =
     | "support-popup"
     | "exit-popup"
-    | "text-popup";
+    | "adblock-popup";
 
 interface PopupItem {
     /**
