@@ -3,7 +3,8 @@
  */
 export type PopupType =
     | "support-popup"
-    | "exit-popup";
+    | "exit-popup"
+    | "text-popup";
 
 interface PopupItem {
     /**
