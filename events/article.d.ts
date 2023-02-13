@@ -1,22 +1,82 @@
-import { DataLayerPage } from "./page";
+/**
+ * Type of the article
+ */
+export type ArticleType = "Artykul" | "Video" | "Podcast" | "Galeria" | "Na zywo";
 
+/**
+ * Article length in words
+ */
 export type ArticleLength = "bardzo krotki" | "krotki" | "sredni" | "dlugi" | "bardzo dlugi";
-export type ArticleType = "text" | "video" | "podcast" | "galeria" | "na zywo";
-export type ArticleAvailability = "zablokowany" | "otwarty";
 
-export interface DataLayerArticle extends DataLayerPage<"Artykuł"> {
-  login_status: boolean;
+/**
+ * Availability of the article
+ */
+export type ArticleAvailability = "yes" | "no";
+
+
+/**
+ * Article page data layer
+ */
+export interface DataLayerArticle {
+  /**
+   * Main topic of the article
+   * @example "Ekologia"
+   */
   article_topic: string;
+  /**
+   * All topics of the article
+   * @example ["Ekologia", "Gospodarka"]
+   */
   article_topics: string[];
-  article_tags: string[];
+  /**
+   * Main category of the article
+   * @example "Analiza"
+   */
   article_category: string;
-  article_categories: string[];
-  article_author: string;
-  article_authors: string[];
+  /**
+   * Tags of the article
+   * @example ["kot", "pies", "krowa"]
+   */
+  article_tags: string[];
+  /**
+   * Type of the article
+   * @example "Artykul"
+   */
   article_type: ArticleType;
-  article_date: string;
-  article_availability: ArticleAvailability;
+  /**
+   * Full name of the main author of the article
+   * @example "Jan Kowalski"
+   */
+  article_author: string;
+  /**
+   * All full names of the authors of the article
+   * @example ["Jan Kowalski", "Janina Kowalska"]
+   */
+  article_additional_authors: string[];
+  /**
+   * Length of the article
+   * @example "bardzo krotki"
+   */
   article_length: ArticleLength;
-  article_length_value: number;
-  article_average_reading_time: number;
+  /**
+   * Date of the article publication
+   * Format: DD.MM.YYYY
+   * @example 01.01.2020
+   */
+  article_date: string;
+  /**
+   * Availability of the article
+   * @example "yes"
+   */
+  article_availability: ArticleAvailability;
+  /**
+   * Number of words in the article
+   * @example 457
+   */
+  article_length_param: number;
+  /**
+   * Average reading time of the article in seconds
+   * @example 3000
+   */
+  article_est_read_time: number;
 }
