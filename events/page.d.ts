@@ -1,7 +1,9 @@
+import { DataLayerBaseValue } from "./core";
+
 /**
  * Page type
  */
-export type PageType = "Artykul" | "Glowna" | "Statyczna" | "Kategoria" | "Temat" | "Tag" | "Osoba" | "Instytucja" | "Konto"
+export type PageType = "Artykul" | "Glowna" | "Autor" | "Kategoria" | "Temat" | "Tag" | "Osoba" | "Instytucja" | "Media" | "Logowanie" | "Konto" | "Archive" | "StaticPage"
 
 /**
  * Login status
@@ -20,7 +22,7 @@ page_type: TPageType
 /**
  * Login status
  */
-login_status: boolean;
+login_status: LoginStatus;
 /**
  * Is article
  * @example 1
@@ -40,7 +42,7 @@ user_id?: string;
 /**
  * Custom page view event
  */
-export type DataLayerPageView2<TPageType extends PageType, T extends Record<string, any>> = DataLayerPageView2Base<TPageType> & T
+export type DataLayerPageView2<TPageType extends PageType, TCustomValue extends Record<string, any>> = DataLayerPageView2Base<TPageType> & TCustomValue
 
 /**
  * Type of the article
@@ -122,4 +124,24 @@ export interface DataLayerArticle {
    * @example 3000
    */
   article_est_read_time: number;
+}
+
+/**
+ * Category page data layer
+ */
+export interface DataLayerCategory {
+  /**
+   * Category name
+   */
+  category_name: string;
+}
+
+/**
+ * Topic page data layer
+ */
+export interface DataLayerTopic {
+  /**
+   * Topic name
+   */
+  topic_name: string;
 }
