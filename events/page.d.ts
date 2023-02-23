@@ -3,56 +3,86 @@ import { DataLayerBaseValue } from "./core";
 /**
  * Page type
  */
-export type PageType = "Artykul" | "Glowna" | "Autor" | "Kategoria" | "Temat" | "Tag" | "Osoba" | "Instytucja" | "Media" | "Logowanie" | "Konto" | "Archive" | "StaticPage"
+export type PageType =
+  | "Artykul"
+  | "Glowna"
+  | "Autor"
+  | "Kategoria"
+  | "Temat"
+  | "Tag"
+  | "Osoba"
+  | "Instytucja"
+  | "Media"
+  | "Logowanie"
+  | "Konto"
+  | "Archive"
+  | "StaticPage";
 
 /**
  * Login status
  */
-export type LoginStatus = "yes" | "no"
+export type LoginStatus = "yes" | "no";
 
 /**
  * Base interface for DataLayerPageView
  */
 export interface DataLayerPageView2Base<TPageType extends PageType> {
-/**
+  /**
+   * Event name
+   */
+  event: "page_view_v2";
+  /**
    * Page type
    * @example "Artykul"
    */
-page_type: TPageType
-/**
- * Login status
- */
-login_status: LoginStatus;
-/**
- * Is article
- * @example 1
- */
-is_article: 1 | 0;
-/**
- * User account status
- * @example "ok"
- */
-user_account_status?: string;
-/**
- * Auth0 user ID
- */
-user_id?: string;
+  page_type: TPageType;
+  /**
+   * Login status
+   */
+  login_status: LoginStatus;
+  /**
+   * Is article
+   * @example 1
+   */
+  is_article: 1 | 0;
+  /**
+   * User account status
+   * @example "ok"
+   */
+  user_account_status?: string;
+  /**
+   * Auth0 user ID
+   */
+  user_id?: string;
 }
 
 /**
  * Custom page view event
  */
-export type DataLayerPageView2<TPageType extends PageType, TCustomValue extends Record<string, any>> = DataLayerPageView2Base<TPageType> & TCustomValue
+export type DataLayerPageView2<
+  TPageType extends PageType,
+  TCustomValue extends Record<string, any>
+> = DataLayerPageView2Base<TPageType> & TCustomValue;
 
 /**
  * Type of the article
  */
-export type ArticleType = "Artykul" | "Video" | "Podcast" | "Galeria" | "Na zywo";
+export type ArticleType =
+  | "Artykul"
+  | "Video"
+  | "Podcast"
+  | "Galeria"
+  | "Na zywo";
 
 /**
  * Article length in words
  */
-export type ArticleLength = "bardzo krotki" | "krotki" | "sredni" | "dlugi" | "bardzo dlugi";
+export type ArticleLength =
+  | "bardzo krotki"
+  | "krotki"
+  | "sredni"
+  | "dlugi"
+  | "bardzo dlugi";
 
 /**
  * Availability of the article
