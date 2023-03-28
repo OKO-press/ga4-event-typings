@@ -16,6 +16,7 @@ export type PageType =
   | "Logowanie"
   | "Konto"
   | "Archive"
+  | "Error"
   | "StaticPage";
 
 /**
