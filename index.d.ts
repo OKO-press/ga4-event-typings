@@ -9,5 +9,6 @@ export * from "./events/popup";
 export * from "./events/purchase";
 export * from "./events/select-item";
 export * from "./events/view-item-list";
+export * from "./events/quiz-solved";
 
 export as namespace GA4Events;
