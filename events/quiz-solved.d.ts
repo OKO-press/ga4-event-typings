@@ -1,5 +1,6 @@
-
-
+/**
+ * Type of quiz
+ */
 export type QuizType = "compass";
 
 export interface DataLayerQuizSolved {
@@ -12,12 +13,12 @@ export interface DataLayerQuizSolved {
   title: QuizType;
 
   /**
-   * Quiz result - depending on quiz type
+   * Quiz result - depends on quiz type
    */
   result: string;
 
   /**
-   * Auth0 user ID
+   * Auth0 user ID, only if user is logged in
    */  
   user_id?: string;
 }
